@@ -1,14 +1,15 @@
 F1_201x_TelemetrySystem
 =======================
 
-# Real Time Telemetry System for F1 2012 Series
+# Real Time Telemetry System for F1 2012 Game Series
 
-Used the project https://github.com/robgray/F1Speed as a base and extended it to make real time graphics of 
-the data collected
+Extension of F1Speed (https://github.com/robgray/F1Speed) that let players examine real time and historic data as charts.
+You will be able to see real time graph with informations like Speed, RPM, Suspension height, Time Difference between the current and the Best Lap at each point of the circuit ....
+Made for those who love tunning each parameter of the car.
 
 # Installation:
 
-F1_201x_TelemetrySystem needs .NET 4.0 installed.  .NET 4.0 is a recommended update for Vista and Windows 7 so hopefully most people have it installed
+F1_201x_TelemetrySystem needs .NET 4.0 installed. .NET 4.0 is a recommended update for Vista and Windows 7 so hopefully most people have it installed
 
 The most important step is to configure the link between F1 2012/2011/2010 and F1_201x_TelemetrySystem.  F1 2011 publishes telemetry data via UDP and we need to tell F1 2012/2011/2010 to use F1_201x_TelemetrySystem as the telemetry destination. To do this you need to change your files.
 
