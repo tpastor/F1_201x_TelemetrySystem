@@ -69,7 +69,6 @@
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.graphToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.realTimeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.genericToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timeDeltaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.speedDeltaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -481,20 +480,12 @@
             // graphToolStripMenuItem
             // 
             this.graphToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.realTimeToolStripMenuItem,
             this.genericToolStripMenuItem,
             this.timeDeltaToolStripMenuItem,
             this.speedDeltaToolStripMenuItem});
             this.graphToolStripMenuItem.Name = "graphToolStripMenuItem";
             this.graphToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
-            this.graphToolStripMenuItem.Text = "Graph";            
-            // 
-            // realTimeToolStripMenuItem
-            // 
-            this.realTimeToolStripMenuItem.Name = "realTimeToolStripMenuItem";
-            this.realTimeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.realTimeToolStripMenuItem.Text = "RealTime";
-            this.realTimeToolStripMenuItem.Click += new System.EventHandler(this.realTimeToolStripMenuItem_Click);
+            this.graphToolStripMenuItem.Text = "Graph";
             // 
             // genericToolStripMenuItem
             // 
@@ -555,7 +546,7 @@
             this.label13.Size = new System.Drawing.Size(85, 23);
             this.label13.TabIndex = 16;
             this.label13.Text = "Wheelspin";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;            
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FrontRightWheelSpin
             // 
@@ -673,7 +664,6 @@
         private System.Windows.Forms.Label FrontLeftWheelSpin;
         private System.Windows.Forms.Label BackLeftWheelSpin;
         private System.Windows.Forms.ToolStripMenuItem graphToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem realTimeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem genericToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem allLapsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem timeDeltaToolStripMenuItem;

@@ -64,17 +64,41 @@ namespace F1Speed
             telemetryLapManager.CompletedFullLap += telemetryLapManager_CompletedFullLap;
             telemetryLapManager.SetFastestLap += telemetryLapManager_SetFastestLap;
             telemetryLapManager.FinishedOutLap += telemetryLapManager_FinishedOutLap;
+            telemetryLapManager.RemovedLap += telemetryLapManager_RemovedLap; 
 
             t1.Interval = F1SpeedSettings.RefreshRate;
             t1.Tick += t1_Tick;
             t1.Start();
         }
 
+        void telemetryLapManager_RemovedLap(object sender, LapEventArgs e)
+        {
+            GraphPane myPane = zedGraphControl1.GraphPane;
+            var curve = myPane.CurveList.First(
+                (a) =>
+                    a.Label.Text == "RealTime"
+                );
+            curve.Clear();
+
+            if (clast)
+            {
+                curve = myPane.CurveList.First(
+                (a) =>
+                    a.Label.Text == "LastLap"
+                );
+                curve.Clear();
+
+                LoadLap(e.Lap, "LastLap", Color.Blue);
+            }
+
+            zedGraphControl1.AxisChange();
+            zedGraphControl1.Invalidate();
+        }
+
         void t1_Tick(object sender, EventArgs e)
         {
             zedGraphControl1.AxisChange();
-            zedGraphControl1.Invalidate();
-            
+            zedGraphControl1.Invalidate();            
         }
 
         void telemetryLapManager_FinishedOutLap(object sender, LapEventArgs e)
@@ -223,7 +247,8 @@ namespace F1Speed
                 telemetryLapManager.PacketProcessed -= telemetryLapManager_PacketProcessed;
                 telemetryLapManager.CompletedFullLap -= telemetryLapManager_CompletedFullLap;
                 telemetryLapManager.SetFastestLap -= telemetryLapManager_SetFastestLap;
-                telemetryLapManager.FinishedOutLap -= telemetryLapManager_FinishedOutLap;               
+                telemetryLapManager.FinishedOutLap -= telemetryLapManager_FinishedOutLap;
+                telemetryLapManager.RemovedLap -= telemetryLapManager_RemovedLap; 
             }
                 GraphPane myPane = zedGraphControl1.GraphPane;
                 myPane.CurveList.Clear();            
