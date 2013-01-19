@@ -188,6 +188,8 @@ namespace F1Speed
             ComparisonLapLabel.Text = manager.ComparisonLapTime;
             CurrentLapLabel.Text = manager.CurrentLapTime;
             AverageLapLabel.Text = manager.AverageLapTime;
+            ExpectedLapLabel.Text = manager.ExpectedLapTime;
+
             
             UpdateTimeDelta(manager.GetTimeDelta());
             UpdateThrottleBrake(manager.CurrentThrottle, manager.CurrentBrake);

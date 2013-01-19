@@ -406,6 +406,14 @@ namespace F1Speed.Core
             }
         }
 
+        public string ExpectedLapTime
+        {
+            get
+            {
+                return !CurrentLap.IsFirstPacketStartLine ? "" : (CurrentLap.LapTime + GetTimeDelta() ).AsTimeString();
+            }
+        }
+
         public string CurrentLapTime
         {
             get

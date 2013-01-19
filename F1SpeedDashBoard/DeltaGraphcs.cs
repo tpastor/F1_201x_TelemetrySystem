@@ -58,14 +58,26 @@ namespace F1Speed
             TelemetryLapManager.PacketProcessed += TelemetryLapManager_PacketProcessed;
             TelemetryLapManager.CompletedFullLap += TelemetryLapManager_CompletedFullLap;
             TelemetryLapManager.FinishedOutLap += TelemetryLapManager_FinishedOutLap;
+            TelemetryLapManager.RemovedLap += TelemetryLapManager_RemovedLap;
 
             timer.Interval = F1SpeedSettings.RefreshRate;
             timer.Tick += timer_Tick;
             timer.Start();
         }
 
+        void TelemetryLapManager_RemovedLap(object sender, LapEventArgs e)
+        {
+          
+            GraphPane myPane = zedGraphControl1.GraphPane;
+            var curve = myPane.CurveList.First(
+                (a) =>
+                    a.Label.Text == atual
+                );
+            curve.Clear();
+        }
+
         void TelemetryLapManager_FinishedOutLap(object sender, LapEventArgs e)
-        {           
+        {
             GraphPane myPane = zedGraphControl1.GraphPane;
             var curve = myPane.CurveList.First(
                 (a) =>
@@ -128,7 +140,9 @@ namespace F1Speed
         private void DeltaGraphcs_FormClosed(object sender, FormClosedEventArgs e)
         {
             TelemetryLapManager.PacketProcessed -= TelemetryLapManager_PacketProcessed;
-            TelemetryLapManager.CompletedFullLap -= TelemetryLapManager_CompletedFullLap;                        
+            TelemetryLapManager.CompletedFullLap -= TelemetryLapManager_CompletedFullLap;
+            TelemetryLapManager.FinishedOutLap -= TelemetryLapManager_FinishedOutLap;
+            TelemetryLapManager.RemovedLap -= TelemetryLapManager_RemovedLap;
         }
 
         private void DeltaGraphcs_Resize(object sender, EventArgs e)

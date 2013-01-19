@@ -79,6 +79,8 @@
             this.FrontRightWheelSpin = new System.Windows.Forms.Label();
             this.FrontLeftWheelSpin = new System.Windows.Forms.Label();
             this.BackLeftWheelSpin = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.ExpectedLapLabel = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.BarGroup.SuspendLayout();
@@ -121,13 +123,15 @@
             this.groupBox1.Controls.Add(this.DeltaLabel);
             this.groupBox1.Location = new System.Drawing.Point(12, 99);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(409, 203);
+            this.groupBox1.Size = new System.Drawing.Size(409, 245);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox2.Controls.Add(this.ExpectedLapLabel);
+            this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.AverageLapLabel);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.CurrentLapLabel);
@@ -136,7 +140,7 @@
             this.groupBox2.Controls.Add(this.ComparisonModeLabel);
             this.groupBox2.Location = new System.Drawing.Point(524, 99);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(399, 200);
+            this.groupBox2.Size = new System.Drawing.Size(399, 245);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             // 
@@ -212,7 +216,7 @@
             this.BarGroup.Controls.Add(this.TimeDeltaLabel);
             this.BarGroup.Controls.Add(this.SlowerBarLabel);
             this.BarGroup.Controls.Add(this.FasterBarLabel);
-            this.BarGroup.Location = new System.Drawing.Point(215, 308);
+            this.BarGroup.Location = new System.Drawing.Point(215, 350);
             this.BarGroup.Name = "BarGroup";
             this.BarGroup.Size = new System.Drawing.Size(707, 124);
             this.BarGroup.TabIndex = 7;
@@ -343,7 +347,7 @@
             this.groupBox5.Controls.Add(this.label9);
             this.groupBox5.Controls.Add(this.BrakeBar);
             this.groupBox5.Controls.Add(this.label6);
-            this.groupBox5.Location = new System.Drawing.Point(13, 309);
+            this.groupBox5.Location = new System.Drawing.Point(13, 351);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(164, 123);
             this.groupBox5.TabIndex = 9;
@@ -490,21 +494,21 @@
             // genericToolStripMenuItem
             // 
             this.genericToolStripMenuItem.Name = "genericToolStripMenuItem";
-            this.genericToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.genericToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.genericToolStripMenuItem.Text = "Generic";
             this.genericToolStripMenuItem.Click += new System.EventHandler(this.genericToolStripMenuItem_Click);
             // 
             // timeDeltaToolStripMenuItem
             // 
             this.timeDeltaToolStripMenuItem.Name = "timeDeltaToolStripMenuItem";
-            this.timeDeltaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.timeDeltaToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.timeDeltaToolStripMenuItem.Text = "Time Delta";
             this.timeDeltaToolStripMenuItem.Click += new System.EventHandler(this.timeDeltaToolStripMenuItem_Click);
             // 
             // speedDeltaToolStripMenuItem
             // 
             this.speedDeltaToolStripMenuItem.Name = "speedDeltaToolStripMenuItem";
-            this.speedDeltaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.speedDeltaToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.speedDeltaToolStripMenuItem.Text = "Speed Delta";
             this.speedDeltaToolStripMenuItem.Click += new System.EventHandler(this.speedDeltaToolStripMenuItem_Click);
             // 
@@ -522,7 +526,7 @@
             this.LogBox.ForeColor = System.Drawing.Color.DarkGray;
             this.LogBox.FormattingEnabled = true;
             this.LogBox.ItemHeight = 20;
-            this.LogBox.Location = new System.Drawing.Point(13, 452);
+            this.LogBox.Location = new System.Drawing.Point(13, 494);
             this.LogBox.Name = "LogBox";
             this.LogBox.Size = new System.Drawing.Size(909, 384);
             this.LogBox.TabIndex = 11;
@@ -532,7 +536,7 @@
             this.BackRightWheelSpin.BackColor = System.Drawing.Color.Yellow;
             this.BackRightWheelSpin.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BackRightWheelSpin.ForeColor = System.Drawing.Color.White;
-            this.BackRightWheelSpin.Location = new System.Drawing.Point(488, 225);
+            this.BackRightWheelSpin.Location = new System.Drawing.Point(488, 242);
             this.BackRightWheelSpin.Name = "BackRightWheelSpin";
             this.BackRightWheelSpin.Size = new System.Drawing.Size(30, 74);
             this.BackRightWheelSpin.TabIndex = 15;
@@ -541,7 +545,7 @@
             // 
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(431, 185);
+            this.label13.Location = new System.Drawing.Point(431, 202);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(85, 23);
             this.label13.TabIndex = 16;
@@ -553,7 +557,7 @@
             this.FrontRightWheelSpin.BackColor = System.Drawing.Color.Yellow;
             this.FrontRightWheelSpin.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FrontRightWheelSpin.ForeColor = System.Drawing.Color.White;
-            this.FrontRightWheelSpin.Location = new System.Drawing.Point(488, 106);
+            this.FrontRightWheelSpin.Location = new System.Drawing.Point(488, 123);
             this.FrontRightWheelSpin.Name = "FrontRightWheelSpin";
             this.FrontRightWheelSpin.Size = new System.Drawing.Size(30, 74);
             this.FrontRightWheelSpin.TabIndex = 13;
@@ -563,7 +567,7 @@
             this.FrontLeftWheelSpin.BackColor = System.Drawing.Color.Yellow;
             this.FrontLeftWheelSpin.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FrontLeftWheelSpin.ForeColor = System.Drawing.Color.White;
-            this.FrontLeftWheelSpin.Location = new System.Drawing.Point(427, 106);
+            this.FrontLeftWheelSpin.Location = new System.Drawing.Point(427, 123);
             this.FrontLeftWheelSpin.Name = "FrontLeftWheelSpin";
             this.FrontLeftWheelSpin.Size = new System.Drawing.Size(30, 74);
             this.FrontLeftWheelSpin.TabIndex = 12;
@@ -573,10 +577,32 @@
             this.BackLeftWheelSpin.BackColor = System.Drawing.Color.Yellow;
             this.BackLeftWheelSpin.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BackLeftWheelSpin.ForeColor = System.Drawing.Color.White;
-            this.BackLeftWheelSpin.Location = new System.Drawing.Point(427, 225);
+            this.BackLeftWheelSpin.Location = new System.Drawing.Point(427, 242);
             this.BackLeftWheelSpin.Name = "BackLeftWheelSpin";
             this.BackLeftWheelSpin.Size = new System.Drawing.Size(30, 74);
             this.BackLeftWheelSpin.TabIndex = 14;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(6, 191);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(145, 26);
+            this.label8.TabIndex = 10;
+            this.label8.Text = "Expected Lap";
+            // 
+            // ExpectedLapLabel
+            // 
+            this.ExpectedLapLabel.AutoSize = true;
+            this.ExpectedLapLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExpectedLapLabel.ForeColor = System.Drawing.Color.White;
+            this.ExpectedLapLabel.Location = new System.Drawing.Point(171, 177);
+            this.ExpectedLapLabel.Name = "ExpectedLapLabel";
+            this.ExpectedLapLabel.Size = new System.Drawing.Size(214, 51);
+            this.ExpectedLapLabel.TabIndex = 11;
+            this.ExpectedLapLabel.Text = "1:55.5555";
             // 
             // Form1
             // 
@@ -668,5 +694,7 @@
         private System.Windows.Forms.ToolStripMenuItem allLapsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem timeDeltaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem speedDeltaToolStripMenuItem;
+        private System.Windows.Forms.Label ExpectedLapLabel;
+        private System.Windows.Forms.Label label8;
     }
 }
