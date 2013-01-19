@@ -536,7 +536,7 @@
             this.BackRightWheelSpin.BackColor = System.Drawing.Color.Yellow;
             this.BackRightWheelSpin.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BackRightWheelSpin.ForeColor = System.Drawing.Color.White;
-            this.BackRightWheelSpin.Location = new System.Drawing.Point(488, 242);
+            this.BackRightWheelSpin.Location = new System.Drawing.Point(488, 250);
             this.BackRightWheelSpin.Name = "BackRightWheelSpin";
             this.BackRightWheelSpin.Size = new System.Drawing.Size(30, 74);
             this.BackRightWheelSpin.TabIndex = 15;
@@ -545,7 +545,7 @@
             // 
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(431, 202);
+            this.label13.Location = new System.Drawing.Point(431, 210);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(85, 23);
             this.label13.TabIndex = 16;
@@ -557,7 +557,7 @@
             this.FrontRightWheelSpin.BackColor = System.Drawing.Color.Yellow;
             this.FrontRightWheelSpin.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FrontRightWheelSpin.ForeColor = System.Drawing.Color.White;
-            this.FrontRightWheelSpin.Location = new System.Drawing.Point(488, 123);
+            this.FrontRightWheelSpin.Location = new System.Drawing.Point(488, 131);
             this.FrontRightWheelSpin.Name = "FrontRightWheelSpin";
             this.FrontRightWheelSpin.Size = new System.Drawing.Size(30, 74);
             this.FrontRightWheelSpin.TabIndex = 13;
@@ -567,7 +567,7 @@
             this.FrontLeftWheelSpin.BackColor = System.Drawing.Color.Yellow;
             this.FrontLeftWheelSpin.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FrontLeftWheelSpin.ForeColor = System.Drawing.Color.White;
-            this.FrontLeftWheelSpin.Location = new System.Drawing.Point(427, 123);
+            this.FrontLeftWheelSpin.Location = new System.Drawing.Point(427, 131);
             this.FrontLeftWheelSpin.Name = "FrontLeftWheelSpin";
             this.FrontLeftWheelSpin.Size = new System.Drawing.Size(30, 74);
             this.FrontLeftWheelSpin.TabIndex = 12;
@@ -577,7 +577,7 @@
             this.BackLeftWheelSpin.BackColor = System.Drawing.Color.Yellow;
             this.BackLeftWheelSpin.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BackLeftWheelSpin.ForeColor = System.Drawing.Color.White;
-            this.BackLeftWheelSpin.Location = new System.Drawing.Point(427, 242);
+            this.BackLeftWheelSpin.Location = new System.Drawing.Point(427, 250);
             this.BackLeftWheelSpin.Name = "BackLeftWheelSpin";
             this.BackLeftWheelSpin.Size = new System.Drawing.Size(30, 74);
             this.BackLeftWheelSpin.TabIndex = 14;

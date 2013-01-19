@@ -82,13 +82,22 @@ namespace F1Speed
 
             if (clast)
             {
-                curve = myPane.CurveList.First(
+                curve = myPane.CurveList.Find(
                 (a) =>
                     a.Label.Text == "LastLap"
                 );
-                curve.Clear();
 
-                LoadLap(e.Lap, "LastLap", Color.Blue);
+                if (curve != null)
+                {
+
+                    myPane.CurveList.Remove(curve);
+                    LoadLap(e.Lap, "LastLap", Color.Blue);
+                }
+                else
+                {
+                    LoadLap(e.Lap, "LastLap", Color.Blue);
+                }
+               
             }
 
             zedGraphControl1.AxisChange();
@@ -188,13 +197,15 @@ namespace F1Speed
 
             if (clast)
             {
-                curve = myPane.CurveList.First(
+                curve = myPane.CurveList.Find(
                 (a) =>
                     a.Label.Text == "LastLap"
                 );
-                curve.Clear();
 
-                LoadLap(e.CompletedLap, "LastLap", Color.Blue);                
+                if (curve != null)
+                    myPane.CurveList.Remove(curve);
+
+                LoadLap(e.CompletedLap, "LastLap", Color.Blue);
             }
 
             zedGraphControl1.AxisChange();
