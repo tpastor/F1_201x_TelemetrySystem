@@ -418,7 +418,7 @@ namespace F1Speed.Core
         {
             get
             {
-                return CurrentLap !=null ? "" : CurrentLap.LapTime.AsTimeString();
+                return CurrentLap ==null ? "" : CurrentLap.LapTime.AsTimeString();
             }
         }
 
