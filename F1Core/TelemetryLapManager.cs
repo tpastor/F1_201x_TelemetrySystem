@@ -410,7 +410,7 @@ namespace F1Speed.Core
         {
             get
             {
-                return !CurrentLap.IsFirstPacketStartLine ? "" : (ComparisonLap.LapTime + GetTimeDelta()).AsTimeString();
+                return ComparisonLap==null ? "" : (ComparisonLap.LapTime - GetTimeDelta()).AsTimeString();
             }
         }
 
@@ -418,7 +418,7 @@ namespace F1Speed.Core
         {
             get
             {
-                return !CurrentLap.IsFirstPacketStartLine ? "" : CurrentLap.LapTime.AsTimeString();
+                return CurrentLap !=null ? "" : CurrentLap.LapTime.AsTimeString();
             }
         }
 
