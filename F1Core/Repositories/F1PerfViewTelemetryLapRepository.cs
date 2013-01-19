@@ -47,11 +47,11 @@ namespace F1Speed.Core.Repositories
                                                                    { "Japan", "21" },
                                                                    { "Korea", "15" },
                                                                    { "Brazil", "16" },
-                                                                   { "Interlagos", "17" },
+                                                                  
                                                                    { "Abu Dahbi", "18" },
                                                                    { "India", "19" },
                                                                    { "United States (COTA)", "23" },
-                                                               };
+                                                               }; 
 
         public void Save(TelemetryLap lap)
         {

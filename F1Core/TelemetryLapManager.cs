@@ -255,8 +255,8 @@ namespace F1Speed.Core
                     CurrentLap.MarkLapCompleted();
                 else 
                     OnReturnedToGarage(CurrentLap);
-                
-                if (CurrentLap.IsCompleteLap)
+
+                if (CurrentLap.IsCompleteLap && packet.Lap > 0)
                 {                    
                     if (string.IsNullOrEmpty(CurrentLap.CircuitName))
                         CurrentLap.CircuitName = _circuitName;
@@ -308,8 +308,10 @@ namespace F1Speed.Core
                 return true;
             }
 
-            if (packet.Lap > CurrentLap.LapNumber || packet.Lap < CurrentLap.LapNumber || 
-                (Math.Abs(packet.Lap - CurrentLap.LapNumber) < Constants.Epsilon && CurrentLap.Distance < 0 && packet.Distance > 0))
+            if (packet.Lap > CurrentLap.LapNumber || 
+                packet.Lap < CurrentLap.LapNumber
+                 ||  (Math.Abs(packet.Lap - CurrentLap.LapNumber) < Constants.Epsilon && CurrentLap.Distance < 0 && packet.Distance > 0)      
+                )
             {
                 #if DEBUG
                 logger.Info("Lap has changed - current lap number changed");
