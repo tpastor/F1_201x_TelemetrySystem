@@ -103,11 +103,8 @@ namespace F1Speed.Core
             if (packet.SpeedInKmPerHour > _topSpeed)
                 _topSpeed = packet.SpeedInKmPerHour;
 
-            if (packet.Gear > 0)
-                _gearChanges++;
-
-            if (packet.Brake > 0)
-                _timeBraking++;
+                _gearChanges+=packet.Gear;
+                _timeBraking += packet.Brake;
 
             //while (_packets.Any() && _packets.First().Distance < 0)
             //    _packets.Remove(_packets.First());

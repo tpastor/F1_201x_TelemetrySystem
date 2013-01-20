@@ -58,9 +58,9 @@ namespace F1Speed
                 dr[3] = item.CircuitName;
                 dr[4] = item.LapType;
                 dr[5] = item.IsOutLap;
-                dr[5] = item.TopSpeed;
-                dr[5] = item.TimeBraking;
-                dr[5] = item.GearChanges; 
+                dr[6] = item.TopSpeed;
+                dr[7] = item.TimeBraking;
+                dr[8] = item.GearChanges; 
             }
 
             dataGridView1.DataSource = dt;            

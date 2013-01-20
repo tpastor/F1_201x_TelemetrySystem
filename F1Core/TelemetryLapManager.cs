@@ -440,23 +440,23 @@ namespace F1Speed.Core
             }
         }
 
-        public string LastLapDiffTime
+        public float LastLapDiffTime
         {
             get
             {
                 if (_laps.Count > 1)
                 {
                     if (CurrentLap == null || !CurrentLap.Packets.Any())
-                        return String.Empty;
+                       return 0;
 
-                    var lastLap = _laps[_laps.Count - 1];
+                    var lastLap = _laps[_laps.Count - 2];
                     var comparisonLapPacket = lastLap.GetPacketClosestTo(LatestPacket);
                     var tm = LatestPacket.LapTime - comparisonLapPacket.LapTime;
-                    return tm.AsTimeString();
+                    return tm;
                 }
                 else
                 {
-                    return String.Empty;
+                    return 0;
                 }                
             }
         }
