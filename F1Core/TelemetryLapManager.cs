@@ -428,7 +428,7 @@ namespace F1Speed.Core
         {
             get
             {
-                return CurrentLap == null ? "" : CurrentLap.CurrentSpeedKMh.ToString();
+                return CurrentLap == null || !CurrentLap.Packets.Any() ? "" : CurrentLap.CurrentSpeedKMh.ToString();
             }
         }
 
@@ -436,7 +436,7 @@ namespace F1Speed.Core
         {
             get
             {
-                return CurrentLap == null ? "" : CurrentLap.TopSpeed.ToString();
+                return CurrentLap == null || !CurrentLap.Packets.Any()  ? "" : CurrentLap.TopSpeed.ToString();
             }
         }
 
