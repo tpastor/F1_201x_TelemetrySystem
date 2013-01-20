@@ -35,6 +35,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.ExpectedLapLabel = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.AverageLapLabel = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.CurrentLapLabel = new System.Windows.Forms.Label();
@@ -79,8 +81,7 @@
             this.FrontRightWheelSpin = new System.Windows.Forms.Label();
             this.FrontLeftWheelSpin = new System.Windows.Forms.Label();
             this.BackLeftWheelSpin = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.ExpectedLapLabel = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.BarGroup.SuspendLayout();
@@ -123,7 +124,7 @@
             this.groupBox1.Controls.Add(this.DeltaLabel);
             this.groupBox1.Location = new System.Drawing.Point(12, 99);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(409, 245);
+            this.groupBox1.Size = new System.Drawing.Size(409, 329);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             // 
@@ -138,11 +139,33 @@
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.ComparisonLapLabel);
             this.groupBox2.Controls.Add(this.ComparisonModeLabel);
-            this.groupBox2.Location = new System.Drawing.Point(524, 99);
+            this.groupBox2.Location = new System.Drawing.Point(524, 98);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(399, 245);
+            this.groupBox2.Size = new System.Drawing.Size(399, 329);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
+            // 
+            // ExpectedLapLabel
+            // 
+            this.ExpectedLapLabel.AutoSize = true;
+            this.ExpectedLapLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExpectedLapLabel.ForeColor = System.Drawing.Color.White;
+            this.ExpectedLapLabel.Location = new System.Drawing.Point(171, 177);
+            this.ExpectedLapLabel.Name = "ExpectedLapLabel";
+            this.ExpectedLapLabel.Size = new System.Drawing.Size(214, 51);
+            this.ExpectedLapLabel.TabIndex = 11;
+            this.ExpectedLapLabel.Text = "1:55.5555";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(6, 191);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(145, 26);
+            this.label8.TabIndex = 10;
+            this.label8.Text = "Expected Lap";
             // 
             // AverageLapLabel
             // 
@@ -213,12 +236,13 @@
             // BarGroup
             // 
             this.BarGroup.BackColor = System.Drawing.Color.Transparent;
+            this.BarGroup.Controls.Add(this.label12);
             this.BarGroup.Controls.Add(this.TimeDeltaLabel);
             this.BarGroup.Controls.Add(this.SlowerBarLabel);
             this.BarGroup.Controls.Add(this.FasterBarLabel);
-            this.BarGroup.Location = new System.Drawing.Point(215, 350);
+            this.BarGroup.Location = new System.Drawing.Point(215, 434);
             this.BarGroup.Name = "BarGroup";
-            this.BarGroup.Size = new System.Drawing.Size(707, 124);
+            this.BarGroup.Size = new System.Drawing.Size(707, 141);
             this.BarGroup.TabIndex = 7;
             this.BarGroup.TabStop = false;
             // 
@@ -226,7 +250,7 @@
             // 
             this.TimeDeltaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TimeDeltaLabel.ForeColor = System.Drawing.Color.White;
-            this.TimeDeltaLabel.Location = new System.Drawing.Point(260, 70);
+            this.TimeDeltaLabel.Location = new System.Drawing.Point(271, 65);
             this.TimeDeltaLabel.Name = "TimeDeltaLabel";
             this.TimeDeltaLabel.Size = new System.Drawing.Size(171, 40);
             this.TimeDeltaLabel.TabIndex = 2;
@@ -238,7 +262,7 @@
             this.SlowerBarLabel.BackColor = System.Drawing.Color.Red;
             this.SlowerBarLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SlowerBarLabel.ForeColor = System.Drawing.Color.White;
-            this.SlowerBarLabel.Location = new System.Drawing.Point(11, 24);
+            this.SlowerBarLabel.Location = new System.Drawing.Point(22, 19);
             this.SlowerBarLabel.Name = "SlowerBarLabel";
             this.SlowerBarLabel.Size = new System.Drawing.Size(333, 37);
             this.SlowerBarLabel.TabIndex = 1;
@@ -248,7 +272,7 @@
             this.FasterBarLabel.BackColor = System.Drawing.Color.Green;
             this.FasterBarLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FasterBarLabel.ForeColor = System.Drawing.Color.White;
-            this.FasterBarLabel.Location = new System.Drawing.Point(350, 24);
+            this.FasterBarLabel.Location = new System.Drawing.Point(361, 19);
             this.FasterBarLabel.Name = "FasterBarLabel";
             this.FasterBarLabel.Size = new System.Drawing.Size(333, 37);
             this.FasterBarLabel.TabIndex = 0;
@@ -347,9 +371,9 @@
             this.groupBox5.Controls.Add(this.label9);
             this.groupBox5.Controls.Add(this.BrakeBar);
             this.groupBox5.Controls.Add(this.label6);
-            this.groupBox5.Location = new System.Drawing.Point(13, 351);
+            this.groupBox5.Location = new System.Drawing.Point(13, 435);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(164, 123);
+            this.groupBox5.Size = new System.Drawing.Size(164, 140);
             this.groupBox5.TabIndex = 9;
             this.groupBox5.TabStop = false;
             // 
@@ -358,7 +382,7 @@
             this.ThrottleBar.BackColor = System.Drawing.Color.Green;
             this.ThrottleBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ThrottleBar.ForeColor = System.Drawing.Color.White;
-            this.ThrottleBar.Location = new System.Drawing.Point(88, 20);
+            this.ThrottleBar.Location = new System.Drawing.Point(84, 23);
             this.ThrottleBar.Name = "ThrottleBar";
             this.ThrottleBar.Size = new System.Drawing.Size(51, 74);
             this.ThrottleBar.TabIndex = 4;
@@ -367,7 +391,7 @@
             // 
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(89, 99);
+            this.label9.Location = new System.Drawing.Point(89, 103);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(46, 13);
             this.label9.TabIndex = 3;
@@ -379,7 +403,7 @@
             this.BrakeBar.BackColor = System.Drawing.Color.Red;
             this.BrakeBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BrakeBar.ForeColor = System.Drawing.Color.White;
-            this.BrakeBar.Location = new System.Drawing.Point(21, 20);
+            this.BrakeBar.Location = new System.Drawing.Point(18, 22);
             this.BrakeBar.Name = "BrakeBar";
             this.BrakeBar.Size = new System.Drawing.Size(51, 74);
             this.BrakeBar.TabIndex = 2;
@@ -388,7 +412,7 @@
             // 
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(22, 94);
+            this.label6.Location = new System.Drawing.Point(22, 98);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(48, 23);
             this.label6.TabIndex = 0;
@@ -526,7 +550,7 @@
             this.LogBox.ForeColor = System.Drawing.Color.DarkGray;
             this.LogBox.FormattingEnabled = true;
             this.LogBox.ItemHeight = 20;
-            this.LogBox.Location = new System.Drawing.Point(13, 494);
+            this.LogBox.Location = new System.Drawing.Point(13, 581);
             this.LogBox.Name = "LogBox";
             this.LogBox.Size = new System.Drawing.Size(909, 384);
             this.LogBox.TabIndex = 11;
@@ -582,27 +606,16 @@
             this.BackLeftWheelSpin.Size = new System.Drawing.Size(30, 74);
             this.BackLeftWheelSpin.TabIndex = 14;
             // 
-            // label8
+            // label12
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(6, 191);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(145, 26);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "Expected Lap";
-            // 
-            // ExpectedLapLabel
-            // 
-            this.ExpectedLapLabel.AutoSize = true;
-            this.ExpectedLapLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ExpectedLapLabel.ForeColor = System.Drawing.Color.White;
-            this.ExpectedLapLabel.Location = new System.Drawing.Point(171, 177);
-            this.ExpectedLapLabel.Name = "ExpectedLapLabel";
-            this.ExpectedLapLabel.Size = new System.Drawing.Size(214, 51);
-            this.ExpectedLapLabel.TabIndex = 11;
-            this.ExpectedLapLabel.Text = "1:55.5555";
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(271, 98);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(171, 40);
+            this.label12.TabIndex = 3;
+            this.label12.Text = "0.0";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
@@ -696,5 +709,6 @@
         private System.Windows.Forms.ToolStripMenuItem speedDeltaToolStripMenuItem;
         private System.Windows.Forms.Label ExpectedLapLabel;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label12;
     }
 }

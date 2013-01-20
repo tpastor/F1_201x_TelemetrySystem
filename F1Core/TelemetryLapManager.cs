@@ -424,6 +424,27 @@ namespace F1Speed.Core
             }
         }
 
+        public string LastLapDiffTime
+        {
+            get
+            {
+                if (_laps.Count > 1)
+                {
+                    if (CurrentLap == null || !CurrentLap.Packets.Any())
+                        return String.Empty;
+
+                    var lastLap = _laps[_laps.Count - 1];
+                    var comparisonLapPacket = lastLap.GetPacketClosestTo(LatestPacket);
+                    var tm = LatestPacket.LapTime - comparisonLapPacket.LapTime;
+                    return tm.AsTimeString();
+                }
+                else
+                {
+                    return String.Empty;
+                }                
+            }
+        }
+
         public string AverageLapTime
         {
             get

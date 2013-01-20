@@ -7,6 +7,6 @@ namespace F1Speed.Core
 {
     public static class Constants
     {
-        public const float Epsilon = 0.00001f;
+        public const float Epsilon = 0.00002f;
     }
 }
