@@ -45,6 +45,9 @@ namespace F1Speed
             CreateColumn(dt, "CircuitName", typeof(String));
             CreateColumn(dt, "LapType", typeof(String));
             CreateColumn(dt, "IsOutLap", typeof(String));
+            CreateColumn(dt, "TopSpeed", typeof(String));
+            CreateColumn(dt, "BrakingTime", typeof(String));
+            CreateColumn(dt, "GearChanges", typeof(String));
 
             foreach (var item in telemetryLapManager.Laps)
             {
@@ -54,7 +57,10 @@ namespace F1Speed
                 dr[2] = item.HasLapFinished;
                 dr[3] = item.CircuitName;
                 dr[4] = item.LapType;
-                dr[5] = item.IsOutLap; 
+                dr[5] = item.IsOutLap;
+                dr[5] = item.TopSpeed;
+                dr[5] = item.TimeBraking;
+                dr[5] = item.GearChanges; 
             }
 
             dataGridView1.DataSource = dt;            
