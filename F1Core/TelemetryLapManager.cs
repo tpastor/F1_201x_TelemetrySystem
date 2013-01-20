@@ -424,6 +424,22 @@ namespace F1Speed.Core
             }
         }
 
+        public string CurrentLapSpeed
+        {
+            get
+            {
+                return CurrentLap == null ? "" : CurrentLap.CurrentSpeedKMh.ToString();
+            }
+        }
+
+        public string CurrentLapTopSpeed
+        {
+            get
+            {
+                return CurrentLap == null ? "" : CurrentLap.TopSpeed.ToString();
+            }
+        }
+
         public string LastLapDiffTime
         {
             get

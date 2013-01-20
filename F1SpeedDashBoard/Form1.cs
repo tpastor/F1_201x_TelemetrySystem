@@ -190,6 +190,8 @@ namespace F1Speed
             AverageLapLabel.Text = manager.AverageLapTime;
             ExpectedLapLabel.Text = manager.ExpectedLapTime;
             label12.Text = manager.LastLapDiffTime;
+            label11.Text = manager.CurrentLapSpeed;
+            label15.Text = manager.CurrentLapTopSpeed;
             
             UpdateTimeDelta(manager.GetTimeDelta());
             UpdateThrottleBrake(manager.CurrentThrottle, manager.CurrentBrake);

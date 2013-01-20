@@ -82,6 +82,10 @@
             this.FrontLeftWheelSpin = new System.Windows.Forms.Label();
             this.BackLeftWheelSpin = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.BarGroup.SuspendLayout();
@@ -120,11 +124,15 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.label15);
+            this.groupBox1.Controls.Add(this.label14);
+            this.groupBox1.Controls.Add(this.label11);
+            this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.DeltaLabel);
             this.groupBox1.Location = new System.Drawing.Point(12, 99);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(409, 329);
+            this.groupBox1.Size = new System.Drawing.Size(409, 271);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             // 
@@ -141,7 +149,7 @@
             this.groupBox2.Controls.Add(this.ComparisonModeLabel);
             this.groupBox2.Location = new System.Drawing.Point(524, 98);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(399, 329);
+            this.groupBox2.Size = new System.Drawing.Size(399, 272);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             // 
@@ -240,7 +248,7 @@
             this.BarGroup.Controls.Add(this.TimeDeltaLabel);
             this.BarGroup.Controls.Add(this.SlowerBarLabel);
             this.BarGroup.Controls.Add(this.FasterBarLabel);
-            this.BarGroup.Location = new System.Drawing.Point(215, 434);
+            this.BarGroup.Location = new System.Drawing.Point(215, 380);
             this.BarGroup.Name = "BarGroup";
             this.BarGroup.Size = new System.Drawing.Size(707, 141);
             this.BarGroup.TabIndex = 7;
@@ -371,7 +379,7 @@
             this.groupBox5.Controls.Add(this.label9);
             this.groupBox5.Controls.Add(this.BrakeBar);
             this.groupBox5.Controls.Add(this.label6);
-            this.groupBox5.Location = new System.Drawing.Point(13, 435);
+            this.groupBox5.Location = new System.Drawing.Point(13, 381);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(164, 140);
             this.groupBox5.TabIndex = 9;
@@ -550,7 +558,7 @@
             this.LogBox.ForeColor = System.Drawing.Color.DarkGray;
             this.LogBox.FormattingEnabled = true;
             this.LogBox.ItemHeight = 20;
-            this.LogBox.Location = new System.Drawing.Point(13, 581);
+            this.LogBox.Location = new System.Drawing.Point(13, 527);
             this.LogBox.Name = "LogBox";
             this.LogBox.Size = new System.Drawing.Size(909, 384);
             this.LogBox.TabIndex = 11;
@@ -616,6 +624,50 @@
             this.label12.TabIndex = 3;
             this.label12.Text = "0.0";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(6, 242);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(75, 26);
+            this.label10.TabIndex = 12;
+            this.label10.Text = "Speed";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(88, 242);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(60, 26);
+            this.label11.TabIndex = 13;
+            this.label11.Text = "0000";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(198, 242);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(122, 26);
+            this.label14.TabIndex = 14;
+            this.label14.Text = "Max Speed";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(326, 242);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(60, 26);
+            this.label15.TabIndex = 15;
+            this.label15.Text = "0000";
             // 
             // Form1
             // 
@@ -710,5 +762,9 @@
         private System.Windows.Forms.Label ExpectedLapLabel;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
     }
 }
