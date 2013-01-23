@@ -3,7 +3,7 @@ F1_201x_TelemetrySystem
 
 # Real Time Telemetry System for F1 2012 Game Series
 
-Extension of F1Speed (https://github.com/robgray/F1Speed) that let players examine real time and historic data as charts.
+Extension of F1Speed (https://github.com/robgray/F1Speed) that let players examine real time and historic data as charts. (Also added some new Statistics data on the main panel)
 
 You will be able to see real time graph with informations like Speed, RPM, Suspension height, Time Difference between the current and the Best Lap at each point of the circuit ....
 
