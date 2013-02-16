@@ -133,7 +133,7 @@ namespace F1Speed.Core
         {
             get
             {
-                const float cutoff = (1000 / 60000f) + 0.001f;
+                //const float cutoff = (1000 / 60000f) + 0.001f;
 
                 if (!Packets.Any())
                     return false;

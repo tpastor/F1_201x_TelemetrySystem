@@ -189,7 +189,7 @@ namespace F1Speed
             CurrentLapLabel.Text = manager.CurrentLapTime;
             AverageLapLabel.Text = manager.AverageLapTime;
             ExpectedLapLabel.Text = manager.ExpectedLapTime;
-            label12.Text = manager.LastLapDiffTime;
+            label12.Text = manager.LastLapDiffTime.ToString();
             label11.Text = manager.CurrentLapSpeed;
             label15.Text = manager.CurrentLapTopSpeed;
             

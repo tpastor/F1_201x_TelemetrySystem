@@ -81,7 +81,6 @@ namespace F1Speed.Core.Repositories
                     {
                         stream.Close();
                     }
-                    return null;
                 }
             } catch (Exception ex)
             {
